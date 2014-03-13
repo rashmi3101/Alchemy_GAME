@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ocanvas example</title>
+    <script src="oCanvas.js"></script>
+    <style>canvas {
+    display: block;
+    border:1px solid #222
+}</style>
+</head>
+<body>
+    
+    <canvas id="canvas" width="1300" height="600"></canvas>
+
+	
+<script>
+    var canvas = oCanvas.create({
+	canvas: "#canvas",
+	fps: 60
+});
+
+var bg = canvas.display.image({
+	x: canvas.width / 2,
+	y: canvas.width /100,
+	origin: { x: "center", y: "middle" },
+	width: canvas.width,
+	height: canvas.height,
+	image: "exit.jpg"
+});
+canvas.addChild(bg);
+var button1 = canvas.display.rectangle({
+	x: canvas.width/600-150  ,
+	y: canvas.width/25 ,
+	//origin: { x: "center", y: "center" },
+	width: 200,
+	height: 40,
+	fill: "#548",
+	stroke: "10px #079",
+	join: "round"
+});
+bg.addChild(button1);
+var buttonText1 = canvas.display.text({
+	x: 100,
+	y: 20,
+	origin: { x: "center", y: "center" },
+	align: "center",
+	font: "bold 25px sans-serif",
+	text: "EXIT",
+	fill: "#fff"
+});
+button1.addChild(buttonText1);
+</script>
+</body>
+</html>
