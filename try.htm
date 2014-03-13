@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calc()
+{
+	if(a==0)
+	{
+		document.forms[0].euro.value=document.forms[0].amount.value/document.forms[0].currency[document.forms[0].currency.selectedIndex].value
+function myFunction()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+
+<body>
+<button onclick="myFunction()">Try it</button>
+<form>
+<input name="amount" onChange="a=0">
+<select name="currency" onChange="calc()">
+<option value="10">A</option>
+<option value="15">B</option>
+</select>
+<input name="euro" onChange="a=1" onChange="calc()">
+</body>
+</html>

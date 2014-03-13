@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="all" />
+<link href="css/dcdrilldown.css" rel="stylesheet" type="text/css" />
+<link href="css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="css/skins/grey.css" rel="stylesheet" type="text/css" />
+<link href="css/skins/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.dcdrilldown.1.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	$('#drilldown-1').dcDrilldown();
+	$('#drilldown-2').dcDrilldown({
+			speed       	: 'fast',
+			saveState		: true,
+			showCount		: true,
+			linkType		: 'link',
+			backText		: 'All',
+			defaultText		: 'Select Option'
+	});
+	$('#drilldown-3').dcDrilldown({
+			speed       	: 'slow',
+			saveState		: true,
+			showCount		: false,
+			linkType		: 'breadcrumb'
+	});
+	$('#drilldown-4').dcDrilldown({
+			speed       	: 'fast',
+			saveState		: false,
+			showCount		: false,
+			linkType		: 'backlink'
+	});
+});
+</script>
+
+<div id="container" style="width:1300px;height:600px;">
+<!--    
+
+
+===================================================================================================================================top
+
+-->
+<div id="topmenu" style="background-color:yellow;height:75px;width:1240px;float:top;text-align:center;padding:30px;display:table;">
+<table style="margin:5px;align:center">
+        <tr>
+            <td>
+                <output type="text" style="background-color:red;width:10px;value='10'"/>
+            </td>
+            <td>
+                <input type="text" style="width:10px"/>
+            </td>
+           
+        </tr>
+    </table>
+</div>
+
+  <!--    
+
+
+===================================================================================================================================left
+
+-->
+
+<b>&nbsp&nbsp&nbsp&nbspMenu</b>
+<br>
+<br>
+
+<div class="grey demo-container">
+<ul id="drilldown-2">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Reactants</a>
+        <ul>
+            <li><a href="#">Reactant 1</a></li>             
+			<li><a href="#">Reactant 2</a></li>             
+			<li><a href="#">Reactant 3</a></li>   
+			<li><a href="#">Reactant 4</a></li>             
+			<li><a href="#">Reactant 5</a></li>             
+			<li><a href="#">Reactant 6</a></li>             
+			<li><a href="#">Reactant 7</a></li>             
+			<li><a href="#">Reactant 8</a></li>             
+			<li><a href="#">Reactant 9</a></li>             
+			<li><a href="#">Reactant 10</a></li>             
+		</ul>
+	</li>
+	<li><a href="#">Reactors</a>
+        <ul>
+            <li><a href="#">Reactor 1</a></li>             
+			<li><a href="#">Reactor 2</a></li>             
+			<li><a href="#">Reactor 3</a></li>   
+		</ul>
+	</li>
+    
+    
+
+</div>
+</div>
+<!--
+<img id="imag"  src="logofinal.png" draggable="true" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Buy</button>
+
+<br>
+<br>
+<img id="imag"  src="logofinal.png" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Buy</button><br>
+<br>
+<img id="imag"  src="logofinal.png" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Buy</button>
+</div>
+<!--    
+
+
+===================================================================================================================================centr
+
+-->
+
+<div id="content" style="background-color:#EEEEEE;height:400px;width:1000px;float:left;">
+
+<canvas id="myCanvas" width="1000" height="400" style="z-index:3 border:1px solid #d3d3d3;">
+</canvas>
+
+<!--    =======================================================newsflsh====================================================-->
+
+<div id="newsmenu" style="background-color:green;height:45px;width:1000px;text-align:center;">
+
+</div>
+
+
+<script>
+
+
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+//------------------------------------------------------------------------------------market items
+
+ctx.fillRect(0,0,1000,400);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<div id="myCanvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+
+
+</div>
+
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<!--    
+
+
+===================================================================================================================================right
+
+-->
+<div id="rightmenu" style="background-color:#FFD700;height:450px;width:150px;float:right;">
+<b>&nbsp&nbsp&nbsp&nbspMenu</b>
+<br>
+<br>
+<img id="imag"  src="logofinal.png" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Sell</button>
+
+<br>
+<br>
+<img id="imag"  src="logofinal.png" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Sell</button><br>
+<br>
+<img id="imag"  src="logofinal.png" style=" height:50px;width:50;">
+
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<output name="amount" value="10">0</output>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button onclick="myFunction()">Sell</button>
+</div>
+
+
+  <!--    
+
+
+===================================================================================================================================footer
+
+-->
+<div id="footer" style="background-color:red;clear:both;text-align:center;">
+ALCHEMY</div>
+</div>
+ 
+</body>
+</html>

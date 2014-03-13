@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="pic" src="stock-market.jpg" width="1200" height="500" style="display:none" />
+<canvas id="myCanvas"  width="1200" height="500" style="border:2px solid #544888;">
+	<img src="stock-market.jpg" />
+
+</canvas>
+<script>
+var imageObj = new Image();
+imageObj.onload = function(){
+var destX = canvas.width / 2 - this.width / 2;
+var destY = canvas.height / 2 - this.height / 2;
+context.drawImage(this, destX, destY);
+};
+imageObj.src = "jet_300x214.jpg";
+};
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var im=document.getElementById("pic");
+ctx.drawImage(im, 0, 0, 500,500);
+
+//ctx.font="30px Arial";
+//ctx.fillText("Hello World",100,200);
+</script>
+
+</body>
+</html>
