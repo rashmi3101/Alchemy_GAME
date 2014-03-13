@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    
+	<link href="timeTo.css" type="text/css" rel="stylesheet"/>
+
+    <style>
+        pre {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px #DDD solid;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="countdown-1"></div>
+
+    <div id="countdown-11"></div>
+
+
+    <div id="countdown-2"></div>
+
+   
+    <div id="countdown-3"></div>
+
+   
+    <div id="clock-1"></div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="jquery.timeTo.min.js"></script>
+    <script>
+        /**
+         * Set timer countdown in seconds with callback
+         */
+        $('#countdown-1').timeTo(9000, function(){
+            alert('Game over!');
+	
+        });
+
+        
+    
+    </script>
+</body>
+</html>
